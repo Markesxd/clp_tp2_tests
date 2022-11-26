@@ -4,7 +4,7 @@ $n = $argv[1];
 $f = fopen('php://stdin', 'r');
 $floats = [];
 while($line = fgets($f)){
-    $floats[] = $line;
+    $floats[] = floatval($line);
 }
 
 $t1 = microtime(true);

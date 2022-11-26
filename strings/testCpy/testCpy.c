@@ -12,7 +12,7 @@ int main(int argc, char **argv){
     char str1[n][30];
     char str2[n][15];
     for(int i = 0; i < n; i++){
-        scanf("Insira as strings: %s, %s", str1[i], str2[i]);
+        scanf("%s %s", str1[i], str2[i]);
     }
     time_t t1, t2;
     t1 = clock();
