@@ -10,7 +10,7 @@ int main(int argc, char **argv){
     char str1[n][15];
     char str2[n][15];
     for(int i = 0; i < n; i++){
-        scanf("Insira as strings: %s, %s", str1[i], str2[i]);
+        scanf("%s %s", str1[i], str2[i]);
     }
     time_t t1, t2;
     t1 = clock();
@@ -18,6 +18,6 @@ int main(int argc, char **argv){
         strcmp(str1[i], str2[i]);
     }
     t2 = clock();
-    printf("Tempo de execução: %f\n", (double)(t2 - t1)/CLOCKS_PER_SEC);
+    printf("%f\n", (double)(t2 - t1)/CLOCKS_PER_SEC);
     return 0;
 }

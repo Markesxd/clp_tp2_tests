@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
 
 int main(int argc, char **argv){
@@ -9,19 +8,16 @@ int main(int argc, char **argv){
         return 1;
     }
     int n = atoi(argv[1]);
-    if(n % 2 != 0){
-        printf("O numero de strings deve ser par\n");
-        return 2;
-    }
-    char strings[n][30];
+    float floats[n];
     for(int i = 0; i < n; i++){
-        scanf("%s", strings[i]);
+        scanf("%f", &floats[i]);
     }
     time_t t1, t2;
 
     t1 = clock();
+    float num;
     for(int i = 0; i < n; i += 2){
-        strcat(strings[i], strings[i + 1]);
+        num = floats[i] + floats[i + 1];
     }
     t2 = clock();
 

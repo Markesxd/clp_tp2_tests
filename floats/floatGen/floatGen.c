@@ -13,7 +13,7 @@ int main(int argc, char **argv){
         size_t num = 1099500329 + rand();
         float fnum;
         fnum = * (float*) &num; //thx quake
-        if(fnum < 0.0000001){
+        if(fnum < 0.0000001 || !(fnum == fnum)){
             i--;
             continue;
         }

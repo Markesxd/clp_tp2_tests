@@ -2,15 +2,14 @@
 
 $n = $argv[1];
 $f = fopen('php://stdin', 'r');
-$strings = [];
+$floats = [];
 while($line = fgets($f)){
-    $strings[] = $line;
+    $floats[] = $line;
 }
 
 $t1 = microtime(true);
-$buffer = '';
-for($i = 0; $i < $n; $i++){
-    $buffer = $strings[$i];
+for($i = 0; $i < $n; $i += 2){
+    $floats[$i] === $floats[$i + 1];
 }
 $t2 = microtime(true);
 
