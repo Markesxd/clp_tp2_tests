@@ -11,13 +11,13 @@ const rl = readline.createInterface({
 
 
 rl.on('line', (line) => {
-    floats.push(line)
+    floats.push(parseFloat(line))
 });
 
 rl.once('close', () => {
     const t1 = process.hrtime()[1]
     let num
-    for(let i = 0; i < 2; i += 2){
+    for(let i = 0; i < n; i += 2){
       num = floats[i] - floats[i + 1]
     }
     const t2 = process.hrtime()[1]

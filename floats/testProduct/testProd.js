@@ -11,7 +11,7 @@ const rl = readline.createInterface({
 
 
 rl.on('line', (line) => {
-    floats.push(line)
+    floats.push(parseFloat(line))
 });
 
 rl.once('close', () => {
